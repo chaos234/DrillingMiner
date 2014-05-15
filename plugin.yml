@@ -1,0 +1,23 @@
+name: DrillingMiner
+version: 0.1
+author: Chaoschaot234
+prefix: DMiner0.1 
+
+main: de.chaoschaot234.DrillingMiner
+
+commands:
+  drillingminer:
+    description: Access to the DrillingMiner commands
+    usage: /<command> [help|kit [player]|buildkit [player]]
+    aliases: [dm]
+    
+permissions:
+  dm.*:
+    children:
+      dm.help: true
+      dm.kit.*: true
+      
+  dm.kit.*:
+    children:
+      dm.kit.self: true
+      dm.kit.other: true

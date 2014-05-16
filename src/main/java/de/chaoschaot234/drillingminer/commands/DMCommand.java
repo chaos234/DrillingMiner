@@ -41,6 +41,12 @@ public class DMCommand implements CommandExecutor {
 					} else {
 						permMsg(p);
 					}
+				}if(args[0].equalsIgnoreCase("reload")) {
+					if(p.hasPermission("dm.admin")) {
+						main.reloadConfig();
+					} else {
+						permMsg(p);
+					}
 				}
 			}
 		}
@@ -67,7 +73,7 @@ public class DMCommand implements CommandExecutor {
 	}
 	
 	private void permMsg(CommandSender cs) {
-		cs.sendMessage("Â§cYou don't have permission to perform this command");
+		cs.sendMessage("§cYou don't have permission to perform this command!");
 	}
 
 }

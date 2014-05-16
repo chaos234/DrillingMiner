@@ -59,7 +59,7 @@ public class DMCommand implements CommandExecutor {
 	}
 	
 	private void permMsg(CommandSender cs) {
-		cs.sendMessage("Â§cYou don't have permission to perform this command");
+		cs.sendMessage("§cYou don't have permission to perform this command");
 	}
 
 }

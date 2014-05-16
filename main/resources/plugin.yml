@@ -1,5 +1,6 @@
 author: Chaoschaot234
 database: false
+prefix: DMiner0.1 
 description: Craftbukkit Plugin to place railways easily :).
 generator: http://dinnerbone.com/minecraft/tools/pluginator/
 main: de.chaoschaot234.drillingminer.DrillingMiner
@@ -7,3 +8,20 @@ name: DrillingMiner
 startup: postworld
 url: http://chaos234.github.io/DrillingMiner/
 version: '0.1'
+
+commands:
+  drillingminer:
+    description: Access to the DrillingMiner commands
+    usage: /<command> [help|kit [player]|buildkit [player]]
+    aliases: [dm]
+    
+permissions:
+  dm.*:
+    children:
+      dm.help: true
+      dm.kit.*: true
+      
+  dm.kit.*:
+    children:
+      dm.kit.self: true
+      dm.kit.other: true

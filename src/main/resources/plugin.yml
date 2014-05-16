@@ -12,16 +12,23 @@ version: '0.1'
 commands:
   drillingminer:
     description: Access to the DrillingMiner commands
-    usage: /<command> [help|kit [player]|buildkit [player]]
+    usage: /<command> [help|kit [player]|buildkit [player]|reload|set [<configparam> <value>]]
     aliases: [dm]
     
 permissions:
   dm.*:
     children:
-      dm.help: true
-      dm.kit.*: true
-      
+        dm.help: true
+        dm.kit.*: true
+        dm.pkit.*: true
+        dm.admin: true
+        
   dm.kit.*:
     children:
-      dm.kit.self: true
-      dm.kit.other: true
+        dm.kit.self: true
+        dm.kit.other: true
+
+  dm.pkit.*:
+    children:
+        dm.pkit.self: true
+        dm.pkit.other: true

@@ -14,7 +14,7 @@ public class DMCommand implements CommandExecutor {
 	public DMCommand(DrillingMiner dm) {
 		main = dm;
 	}
-	
+    
 	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		
@@ -26,18 +26,26 @@ public class DMCommand implements CommandExecutor {
 			else if(args.length == 1) {
 				if(args[0].equalsIgnoreCase("kit")) {
 					if(p.hasPermission("dm.kit.self")) {
-						
+						//TODO: Add a "new Kit()" with defined materials to give.
 					} else if(p.hasPermission("dm.kit.other")) {
-						
+						//TODO: Add a "new Kit()" with defined materials to give.
 					} else {
 						permMsg(p);
 					}
 				}
-				if(args[0].equalsIgnoreCase(""));
+				if(args[0].equalsIgnoreCase("playerkit")) {
+					if(p.hasPermission("dm.pkit.self")) {
+						//TODO: Add a "new Kit()" with defined materials to give.
+					} else if (p.hasPermission("dm.pkit.other")) {
+						//TODO: Add a "new Kit()" with defined materials to give.
+					} else {
+						permMsg(p);
+					}
+				}
 			}
 		}
 		else {
-			cs.sendMessage("Â§cYou can only perform this command as a player");
+			cs.sendMessage("§cYou can only perform this command as a player");
 		}
 		
 		return true;

@@ -1,0 +1,9 @@
+author: Chaoschaot234
+database: false
+description: Craftbukkit Plugin to place railways easily :).
+generator: http://dinnerbone.com/minecraft/tools/pluginator/
+main: de.chaoschaot234.drillingminer.DrillingMiner
+name: DrillingMiner
+startup: postworld
+url: http://chaos234.github.io/DrillingMiner/
+version: '0.1'

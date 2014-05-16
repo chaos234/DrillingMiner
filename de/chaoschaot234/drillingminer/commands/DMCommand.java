@@ -37,7 +37,7 @@ public class DMCommand implements CommandExecutor {
 			}
 		}
 		else {
-			cs.sendMessage("Â§cYou can only perform this command as a player");
+			cs.sendMessage("§cYou can only perform this command as a player");
 		}
 		
 		return true;
@@ -45,13 +45,13 @@ public class DMCommand implements CommandExecutor {
 	
 	private void help(CommandSender cs) {
 		if(cs.hasPermission("dm.help")) {
-			cs.sendMessage("Â§aâ•”â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�");
-			cs.sendMessage("Â§aâ•‘  Â§3Â§lDrillingMiner Help");
-			cs.sendMessage("Â§aâ•‘  Â§6/dm Â§bhelp Â§f: To get this help.");
+			cs.sendMessage("§a ######################################################################################################");
+			cs.sendMessage("§a # §3Â§lDrillingMiner Help");
+			cs.sendMessage("§a # §6/dm Â§bhelp Â§f: To get this help.");
 			if(cs.hasPermission("dm.kit.self") || cs.hasPermission("dm.kit.other")) {
-				cs.sendMessage("Â§aâ•‘  Â§6/dm Â§bkit Â§a[player] Â§f: Gives you or a player the DM Kit to build it.");
+				cs.sendMessage("§a # §6/dm §bkit §a[player] §f: Gives you or a player the DM Kit to build it.");
 			}
-			cs.sendMessage("Â§aâ•šâ•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�");
+			cs.sendMessage("§a ######################################################################################################");
 		}
 		else {
 			permMsg(cs);

@@ -3,7 +3,7 @@ version: 0.1
 author: Chaoschaot234
 prefix: DMiner0.1 
 
-main: de.chaoschaot234.DrillingMiner
+main: main.java.de.chaoschaot234.DrillingMiner
 
 commands:
   drillingminer:

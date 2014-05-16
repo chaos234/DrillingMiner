@@ -1,4 +1,4 @@
-package de.chaoschaot234.drillingminer;
+package main.java.de.chaoschaot234.drillingminer;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import de.chaoschaot234.drillingminer.commands.DMCommand;
+import main.java.de.chaoschaot234.drillingminer.commands.DMCommand;
 
 public class DrillingMiner extends JavaPlugin {
 

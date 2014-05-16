@@ -1,11 +1,11 @@
-package de.chaoschaot234.drillingminer.commands;
+package main.java.de.chaoschaot234.drillingminer.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import de.chaoschaot234.drillingminer.DrillingMiner;
+import main.java.de.chaoschaot234.drillingminer.DrillingMiner;
 
 public class DMCommand implements CommandExecutor {
 

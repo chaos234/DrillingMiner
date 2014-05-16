@@ -86,12 +86,12 @@ public class ScalingKit {
      *            total amount of material the stacks should contain
      * @return Stacks of {@code mat} containing {@code amount} units in total
      */
-    public List<ItemStack> getMinimalStacks(Material mat, int amount) {
+    public static List<ItemStack> getMinimalStacks(Material mat, int amount) {
         List<ItemStack> result = new LinkedList<ItemStack>();
         int maxStackSize = new ItemStack(mat).getMaxStackSize();
 
         while (amount > maxStackSize) {
-            result.add(new ItemStack(mat, amount));
+            result.add(new ItemStack(mat, maxStackSize));
             amount -= maxStackSize;
         }
         result.add(new ItemStack(mat, amount));

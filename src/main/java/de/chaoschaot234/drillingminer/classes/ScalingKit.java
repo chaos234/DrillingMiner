@@ -10,16 +10,26 @@ import java.util.TreeSet;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class DMKit {
+/**
+ * A kit of Items scaling with a given parameter.
+ *
+ */
+public class ScalingKit {
 	
 	private Map<Material, Integer> flat;
 	private Map<Material, Integer> scaling;
 	
-	public DMKit() {
+	public ScalingKit() {
 		this.flat = new HashMap<Material, Integer>();
 		this.scaling = new HashMap<Material, Integer>();
 	}
 	
+	/**
+	 * Set the flat amount of {@code mat} given.
+	 * 
+	 * @param mat Material in question
+	 * @param amount how many of the material should be given flat
+	 */
 	public void setFlat(Material mat, int amount) {
 		if (amount > 0) {
 			this.flat.put(mat, amount);
@@ -28,6 +38,12 @@ public class DMKit {
 		}
 	}
 	
+	/**
+     * Set the amount of {@code mat} given per scaling unit.
+     * 
+     * @param mat Material in question
+     * @param amount how many of the material should be given per scaling unit
+     */
 	public void setScaling(Material mat, int amount) {
 		if (amount > 0) {
 			this.scaling.put(mat, amount);
@@ -36,6 +52,12 @@ public class DMKit {
 		}
 	}
 	
+	/**
+	 * Calculate the kit for a given parameter
+	 * 
+	 * @param param parameter
+	 * @return flat items + (param * scaling items)
+	 */
 	public List<ItemStack> getItems(int param) {
 		Set<Material> mats = new TreeSet<Material>();
 		mats.addAll(this.flat.keySet());
@@ -54,6 +76,13 @@ public class DMKit {
 		return result;
 	}
 	
+	/**
+	 * Calculates the minimal list of stacks
+	 * 
+	 * @param mat Material the stacks should contain
+	 * @param amount total amount of material the stacks should contain
+	 * @return Stacks of {@code mat} containing {@code amount} units in total
+	 */
 	public List<ItemStack> getMinimalStacks(Material mat, int amount) {
 		List<ItemStack> result = new LinkedList<ItemStack>();
 		int maxStackSize = new ItemStack(mat).getMaxStackSize();

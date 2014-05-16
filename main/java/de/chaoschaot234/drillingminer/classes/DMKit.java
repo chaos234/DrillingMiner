@@ -1,4 +1,4 @@
-package main.java.de.chaoschaot234.drillingminer.classes;
+package de.chaoschaot234.drillingminer.classes;
 
 import java.util.LinkedList;
 import java.util.List;
